@@ -1,3 +1,5 @@
+/* Макет - https://www.figma.com/file/5mw0SMxtOcr4i8nvl5vjjv/Relvise?node-id=964%3A17400&t=m4JvuSghJVGZjp6q-0 */
+
 *,
 *::before,
 *::after {
@@ -44,6 +46,8 @@ body {
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 ._container {
@@ -54,13 +58,13 @@ body {
 
 }
 
-/* !Шапка */
+/* ! >>>>>>>>>>>>>>>>>>Шапка<<<<<<<<<<<<<<<<<<<<< */
 .header {
     position: absolute;
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 50%;
+    z-index: 50;
 }
 
 .header__container {
@@ -79,6 +83,7 @@ body {
     margin: 0px 0px 0px 133px;
 }
 
+/* ? Адаптив под размеры экранов мобилок ( отсутпы от лого ) */
 @media (max-width: 992px) {
     .header__menu {
         margin: 0px 0px 0px 80px;
@@ -97,6 +102,7 @@ body {
     }
 }
 
+/* ? ------------------------------------------------------- */
 .menu {
     padding: 5px 0;
 }
@@ -117,8 +123,19 @@ body {
     font-weight: 600;
 }
 
+/* ? Увеличение шрифта меню длю удобства пользования на мелких экранах */
 @media (max-width:479px) {
     .menu__link {
         font-size: 18px;
     }
 }
+
+/* ? ----------------------------------------------------------------- */
+
+/* ! Main page */
+.page {
+    flex: 1 1 auto;
+}
+
+/* ! Footer */
+.footer {}
