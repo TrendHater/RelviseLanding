@@ -35,9 +35,10 @@ html,
 body {
     height: 100%;
     line-height: 1;
-    font-size: 17px;
-    color: black;
+    font-size: 14px;
+    color: #252B42;
     font-family: Montserrat;
+    font-weight: 500;
 }
 
 .wrapper {
@@ -47,23 +48,77 @@ body {
 
 ._container {
     max-width: 1046px;
+    padding: 0px 15px;
     margin: 0px auto;
+    box-sizing: content-box;
+
 }
 
-.header {}
+/* !Шапка */
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50%;
+}
 
-.header__container {}
+.header__container {
+    display: flex;
+    min-height: 104px;
+    align-items: center;
+}
 
-._container {}
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: inherit;
+}
 
-.header__logo {}
+.header__menu {
+    margin: 0px 0px 0px 133px;
+}
 
-.header__menu {}
+@media (max-width: 992px) {
+    .header__menu {
+        margin: 0px 0px 0px 80px;
+    }
+}
 
-.menu {}
+@media (max-width:767px) {
+    .header__menu {
+        margin: 0px 0px 0px 40px;
+    }
+}
 
-.menu__list {}
+@media (max-width:479px) {
+    .header__menu {
+        margin: 0px 0px 0px 20px;
+    }
+}
 
-.menu__item {}
+.menu {
+    padding: 5px 0;
+}
 
-.menu__link {}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__item:not(:last-child) {
+    margin: 0px 21px 0px 0px;
+}
+
+.menu__link {
+    color: #737373;
+    line-height: 171%;
+    /* ? line-height: calc(24/14*100%); */
+    font-weight: 600;
+}
+
+@media (max-width:479px) {
+    .menu__link {
+        font-size: 18px;
+    }
+}
